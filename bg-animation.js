@@ -1,4 +1,4 @@
-// Türk Bayrağı + Particle Network Canvas Animation
+// MIT-Style Dark Theme Particle Network with Turkish Flag Watermark
 (function () {
     const canvas = document.getElementById('bg-canvas');
     if (!canvas) return;
@@ -7,14 +7,14 @@
     let W, H, particles = [], mouse = { x: -9999, y: -9999 };
 
     const CONFIG = {
-        particleCount: 80,
+        particleCount: 90,
         particleRadius: 1.8,
-        lineDistance: 150,
-        mouseDistance: 170,
-        speed: 0.35,
+        lineDistance: 160,
+        mouseDistance: 180,
+        speed: 0.4,
         colorPrimary: '255, 255, 255',
-        colorSecondary: '255, 220, 220',
-        colorTertiary: '255, 200, 200',
+        colorSecondary: '6, 182, 212',
+        colorTertiary: '148, 163, 184',
     };
 
     function resize() {
@@ -22,20 +22,23 @@
         H = canvas.height = document.body.scrollHeight || window.innerHeight;
     }
 
-    function drawFlag() {
-        ctx.fillStyle = '#E30A17';
+    function drawFlagWatermark() {
+        ctx.fillStyle = '#070b15';
         ctx.fillRect(0, 0, W, H);
+
+        const gradient = ctx.createRadialGradient(W / 2, H / 3, 10, W / 2, H / 3, Math.max(W, H) * 0.8);
+        gradient.addColorStop(0, '#0f1b35');
+        gradient.addColorStop(1, '#070b15');
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, W, H);
+
+        const size = Math.min(W, H) * 0.45;
+        const cx = W * 0.28;
+        const cy = H * 0.38;
+
         ctx.save();
-        ctx.globalAlpha = 0.07;
-        drawCrescent(W * 0.5, H * 0.35, Math.min(W, H) * 0.38);
-        ctx.restore();
-        ctx.save();
-        ctx.globalAlpha = 0.04;
-        drawCrescent(W * 0.1, H * 0.75, Math.min(W, H) * 0.13);
-        ctx.restore();
-        ctx.save();
-        ctx.globalAlpha = 0.03;
-        drawCrescent(W * 0.88, H * 0.15, Math.min(W, H) * 0.1);
+        ctx.globalAlpha = 0.025;
+        drawCrescent(cx, cy, size);
         ctx.restore();
     }
 
@@ -45,11 +48,16 @@
         ctx.beginPath();
         ctx.arc(cx - size * 0.05, cy, r, 0, Math.PI * 2);
         ctx.fill();
-        ctx.fillStyle = '#E30A17';
+
+        ctx.fillStyle = '#0c162b';
         ctx.beginPath();
         ctx.arc(cx + r * 0.25, cy, r * 0.8, 0, Math.PI * 2);
         ctx.fill();
-        drawStar(cx + r * 0.9, cy, 5, r * 0.35, r * 0.14);
+
+        const starX = cx + r * 0.95;
+        const starY = cy;
+        const starR = r * 0.35;
+        drawStar(starX, starY, 5, starR, starR * 0.4);
     }
 
     function drawStar(cx, cy, points, outerR, innerR) {
@@ -58,15 +66,18 @@
         for (let i = 0; i < points * 2; i++) {
             const r = i % 2 === 0 ? outerR : innerR;
             const angle = (i * Math.PI) / points - Math.PI / 2;
-            i === 0 ? ctx.moveTo(cx + r * Math.cos(angle), cy + r * Math.sin(angle))
-                    : ctx.lineTo(cx + r * Math.cos(angle), cy + r * Math.sin(angle));
+            const x = cx + r * Math.cos(angle);
+            const y = cy + r * Math.sin(angle);
+            i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
         }
         ctx.closePath();
         ctx.fill();
     }
 
     class Particle {
-        constructor() { this.reset(); }
+        constructor() {
+            this.reset();
+        }
         reset() {
             this.x = Math.random() * W;
             this.y = Math.random() * H;
@@ -74,70 +85,123 @@
             this.vy = (Math.random() - 0.5) * CONFIG.speed;
             this.radius = Math.random() * CONFIG.particleRadius + 0.8;
             const r = Math.random();
-            this.color = r < 0.6 ? CONFIG.colorPrimary : r < 0.8 ? CONFIG.colorSecondary : CONFIG.colorTertiary;
-            this.baseAlpha = Math.random() * 0.35 + 0.2;
+            if (r < 0.5) this.color = CONFIG.colorPrimary;
+            else if (r < 0.8) this.color = CONFIG.colorSecondary;
+            else this.color = CONFIG.colorTertiary;
+            this.baseAlpha = Math.random() * 0.35 + 0.15;
             this.alpha = this.baseAlpha;
             this.pulseSpeed = Math.random() * 0.02 + 0.005;
             this.pulseAngle = Math.random() * Math.PI * 2;
         }
         update() {
-            this.x += this.vx; this.y += this.vy;
+            this.x += this.vx;
+            this.y += this.vy;
             this.pulseAngle += this.pulseSpeed;
-            this.alpha = this.baseAlpha + Math.sin(this.pulseAngle) * 0.1;
-            const dx = mouse.x - this.x, dy = mouse.y - this.y;
+            this.alpha = this.baseAlpha + Math.sin(this.pulseAngle) * 0.08;
+
+            const dx = mouse.x - this.x;
+            const dy = mouse.y - this.y;
             const dist = Math.sqrt(dx * dx + dy * dy);
             if (dist < CONFIG.mouseDistance) {
-                const force = (CONFIG.mouseDistance - dist) / CONFIG.mouseDistance * 0.03;
-                this.vx += dx * force * 0.05; this.vy += dy * force * 0.05;
+                const force = (CONFIG.mouseDistance - dist) / CONFIG.mouseDistance * 0.02;
+                this.vx += dx * force * 0.04;
+                this.vy += dy * force * 0.04;
             }
+
             const speed = Math.sqrt(this.vx * this.vx + this.vy * this.vy);
-            if (speed > CONFIG.speed * 2.5) { this.vx = (this.vx / speed) * CONFIG.speed * 2.5; this.vy = (this.vy / speed) * CONFIG.speed * 2.5; }
-            if (this.x < -20) this.x = W + 20; if (this.x > W + 20) this.x = -20;
-            if (this.y < -20) this.y = H + 20; if (this.y > H + 20) this.y = -20;
+            if (speed > CONFIG.speed * 2) {
+                this.vx = (this.vx / speed) * CONFIG.speed * 2;
+                this.vy = (this.vy / speed) * CONFIG.speed * 2;
+            }
+
+            if (this.x < -20) this.x = W + 20;
+            if (this.x > W + 20) this.x = -20;
+            if (this.y < -20) this.y = H + 20;
+            if (this.y > H + 20) this.y = -20;
         }
         draw() {
-            const g = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius * 3);
-            g.addColorStop(0, `rgba(${this.color}, ${this.alpha})`);
-            g.addColorStop(1, `rgba(${this.color}, 0)`);
-            ctx.beginPath(); ctx.arc(this.x, this.y, this.radius * 3, 0, Math.PI * 2);
-            ctx.fillStyle = g; ctx.fill();
-            ctx.beginPath(); ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(${this.color}, ${Math.min(this.alpha + 0.3, 1)})`; ctx.fill();
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(${this.color}, ${this.alpha})`;
+            ctx.fill();
+        }
+    }
+
+    function drawLine(p1, p2, dist) {
+        const alpha = (1 - dist / CONFIG.lineDistance) * 0.18;
+        ctx.beginPath();
+        ctx.moveTo(p1.x, p1.y);
+        ctx.lineTo(p2.x, p2.y);
+        ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
+        ctx.lineWidth = 0.6;
+        ctx.stroke();
+    }
+
+    function drawMouseLines(p) {
+        const dx = mouse.x - p.x;
+        const dy = mouse.y - p.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < CONFIG.mouseDistance) {
+            const alpha = (1 - dist / CONFIG.mouseDistance) * 0.35;
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(mouse.x, mouse.y);
+            ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+        }
+    }
+
+    function init() {
+        resize();
+        particles = [];
+        for (let i = 0; i < CONFIG.particleCount; i++) {
+            particles.push(new Particle());
         }
     }
 
     function animate() {
-        drawFlag();
+        drawFlagWatermark();
+
         for (let i = 0; i < particles.length; i++) {
             for (let j = i + 1; j < particles.length; j++) {
-                const dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y;
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
                 const dist = Math.sqrt(dx * dx + dy * dy);
                 if (dist < CONFIG.lineDistance) {
-                    const alpha = (1 - dist / CONFIG.lineDistance) * 0.25;
-                    ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y);
-                    ctx.lineTo(particles[j].x, particles[j].y);
-                    ctx.strokeStyle = `rgba(255,255,255,${alpha})`; ctx.lineWidth = 0.7; ctx.stroke();
+                    drawLine(particles[i], particles[j], dist);
                 }
             }
-            const dx = mouse.x - particles[i].x, dy = mouse.y - particles[i].y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < CONFIG.mouseDistance) {
-                const alpha = (1 - dist / CONFIG.mouseDistance) * 0.5;
-                ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y);
-                ctx.lineTo(mouse.x, mouse.y);
-                ctx.strokeStyle = `rgba(255,255,255,${alpha})`; ctx.lineWidth = 1; ctx.stroke();
-            }
+            drawMouseLines(particles[i]);
         }
-        for (const p of particles) { p.update(); p.draw(); }
+
+        for (const p of particles) {
+            p.update();
+            p.draw();
+        }
+
         requestAnimationFrame(animate);
     }
 
-    window.addEventListener('mousemove', e => { mouse.x = e.clientX + window.scrollX; mouse.y = e.clientY + window.scrollY; });
-    window.addEventListener('resize', () => { W = canvas.width = window.innerWidth; H = canvas.height = document.body.scrollHeight || window.innerHeight; });
-    document.addEventListener('scroll', () => { const newH = document.body.scrollHeight; if (newH !== H) H = canvas.height = newH; });
+    window.addEventListener('mousemove', (e) => {
+        mouse.x = e.clientX + window.scrollX;
+        mouse.y = e.clientY + window.scrollY;
+    });
 
-    W = canvas.width = window.innerWidth;
-    H = canvas.height = document.body.scrollHeight || window.innerHeight;
-    for (let i = 0; i < CONFIG.particleCount; i++) particles.push(new Particle());
+    window.addEventListener('resize', () => {
+        resize();
+        for (const p of particles) {
+            if (p.x > W || p.y > H) p.reset();
+        }
+    });
+
+    document.addEventListener('scroll', () => {
+        const newH = document.body.scrollHeight;
+        if (newH !== H) {
+            H = canvas.height = newH;
+        }
+    });
+
+    init();
     animate();
 })();
