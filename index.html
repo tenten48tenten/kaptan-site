@@ -1,433 +1,507 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title id="meta-title">Fethiye Teknik Servis | CCTV Kamera Kurulum & Bilgisayar Servisi</title>
-    <meta name="description" id="meta-desc" content="Fethiye, Göcek, Dalaman ve Ortaca'da profesyonel güvenlik kamerası kurulumu ve bilgisayar teknik servis hizmetleri. Hızlı, güvenilir ve uygun fiyatlı çözümler.">
-    <meta name="keywords" id="meta-keywords" content="fethiye güvenlik kamerası, fethiye bilgisayar tamiri, fethiye cctv, dalaman kamera kurulum, fethiye bilgisayar servisi, fethiye teknik servis, ремонт компьютеров фетхие">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://fethiyekaptanbilisimteknolojileri.com.tr/">
-    <meta property="og:title" content="Fethiye Teknik Servis | Kamera & Bilgisayar Servisi">
-    <meta property="og:description" content="Fethiye, Göcek, Dalaman ve Ortaca genelinde profesyonel güvenlik kamerası kurulumu ve bilgisayar teknik servisi.">
-    <meta property="og:image" content="https://fethiyekaptanbilisimteknolojileri.com.tr/Kaptan_Services_Flyer.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://fethiyekaptanbilisimteknolojileri.com.tr/">
-    <meta property="twitter:title" content="Fethiye Teknik Servis | Kamera & Bilgisayar Servisi">
-    <meta property="twitter:description" content="Fethiye, Göcek, Dalaman ve Ortaca genelinde profesyonel güvenlik kamerası kurulumu ve bilgisayar teknik servisi.">
-    <meta property="twitter:image" content="https://fethiyekaptanbilisimteknolojileri.com.tr/Kaptan_Services_Flyer.png">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="Kaptan_Services_Flyer.png">
-    <link rel="apple-touch-icon" href="Kaptan_Services_Flyer.png">
-
-    <!-- Local Business Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Fethiye Teknik Servis",
-      "image": "https://fethiyekaptanbilisimteknolojileri.com.tr/Kaptan_Services_Flyer.png",
-      "@id": "https://fethiyekaptanbilisimteknolojileri.com.tr/#website",
-      "url": "https://fethiyekaptanbilisimteknolojileri.com.tr/",
-      "telephone": "+905524785273",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Fethiye Merkez",
-        "addressLocality": "Fethiye",
-        "addressRegion": "Muğla",
-        "postalCode": "48300",
-        "addressCountry": "TR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "36.6219",
-        "longitude": "29.1164"
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "08:00",
-        "closes": "22:00"
-      },
-      "sameAs": [
-        "https://wa.me/905524785273"
-      ],
-      "areaServed": [
-        {
-          "@type": "AdministrativeArea",
-          "name": "Fethiye"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Göcek"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Dalaman"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Ortaca"
+    <title>Fethiye Kaptan Bilişim Teknolojileri | Yerinde Teknik Servis & Bilgisayar Tamiri</title>
+    <meta name="description" content="Fethiye ve çevresi yerinde teknik servis, 500 TL format ve lisanslı kurulum, veri kurtarma, 4K güvenlik kamera sistemleri ve eski PC dönüşüm merkezi.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#172554',
+                        }
+                    }
+                }
+            }
         }
-      ]
-    }
     </script>
-
-    <!-- Google Fonts & Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        @keyframes pulse-whatsapp {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { transform: scale(1.08); box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+        .whatsapp-float {
+            animation: pulse-whatsapp 2s infinite;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-blue-500 selection:text-white">
 
-    <!-- Animated Canvas Background -->
-    <canvas id="bg-canvas"></canvas>
-    <!-- Background Glows -->
-    <div class="glow glow-1"></div>
-    <div class="glow glow-2"></div>
-    <div class="glow glow-3"></div>
-
-    <!-- TOP PHONE BAR -->
-    <div class="top-phone-bar">
-        <div class="container top-phone-inner">
-            <div class="top-phone-left">
-                <i class="fa-solid fa-location-dot"></i>
-                <span>Fethiye · Göcek · Dalaman · Ortaca</span>
+    <!-- Top Info Bar -->
+    <div class="bg-gradient-to-r from-blue-900 via-indigo-900 to-blue-900 text-xs sm:text-sm py-2 px-4 border-b border-blue-800/50">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span class="flex items-center gap-1.5 text-blue-300 font-medium">
+                    <i class="fas fa-map-marker-alt text-amber-400"></i> Fethiye ve Çevresi Yerinde Teknik Servis
+                </span>
+                <span class="hidden md:flex items-center gap-1.5 text-emerald-400 font-medium">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> 7/24 Teknik Destek & Acil Servis
+                </span>
             </div>
-            <div class="top-phone-right">
-                <a href="tel:+905321234567" class="top-phone-link" id="top-phone-link">
-                    <i class="fa-solid fa-phone-volume"></i>
-                    <span id="top-phone-number">0532 123 45 67</span>
-                </a>
-                <a href="https://wa.me/905321234567" class="top-wa-link" target="_blank" id="top-wa-link">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <span>WhatsApp</span>
+            <div class="flex items-center gap-4">
+                <a href="tel:05308496559" class="flex items-center gap-2 hover:text-amber-400 font-bold transition">
+                    <i class="fas fa-phone-alt text-amber-400"></i> 0530 849 65 59
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- Navigation -->
-    <header>
-        <div class="container navbar">
-            <div class="logo" id="logo-text">
-                <i class="fa-solid fa-anchor logo-icon"></i> FETHİYE <span class="accent-text">TEKNİK SERVİS</span>
-            </div>
-            
-            <div class="nav-right">
-                <!-- Language Switcher -->
-                <div class="lang-selector">
-                    <button class="lang-btn active" data-lang="tr">TR</button>
-                    <button class="lang-btn" data-lang="en">EN</button>
-                    <button class="lang-btn" data-lang="ru">RU</button>
+    <!-- Sticky Navigation -->
+    <header class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-white shadow-lg shadow-blue-500/35 group-hover:scale-105 transition">
+                    <i class="fas fa-microchip text-xl"></i>
                 </div>
-                <a href="tel:+905321234567" class="btn-call-header" id="nav-call-btn">
-                    <i class="fa-solid fa-phone"></i> <span id="nav-phone-txt">Hemen Ara</span>
+                <div>
+                    <span class="block font-extrabold text-lg sm:text-xl tracking-tight bg-gradient-to-r from-white via-blue-100 to-blue-300 bg-clip-text text-transparent">KAPTAN BİLİŞİM</span>
+                    <span class="block text-[10px] uppercase tracking-widest text-blue-400 font-semibold">Fethiye Teknoloji Merkezi</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-300">
+                <a href="#kampanyalar" class="hover:text-amber-400 transition">Flaş Kampanyalar</a>
+                <a href="#sinetech" class="hover:text-blue-400 transition">Sinetech Dönüşüm</a>
+                <a href="#kameralar" class="hover:text-blue-400 transition">Güvenlik Kameraları</a>
+                <a href="#gonul-koprusu" class="hover:text-emerald-400 transition">Gönül Köprüsü</a>
+                <a href="#galeri" class="hover:text-blue-400 transition">Galeri</a>
+                <a href="#hesaplayici" class="hover:text-blue-400 transition">Tasarruf Hesapla</a>
+            </nav>
+
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="https://wa.me/905308496559?text=Merhaba,%20Fethiye%20Kaptan%20Bili%C5%9Fim%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-lg shadow-emerald-600/30 flex items-center gap-2 transition hover:scale-105">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                    <span>WhatsApp Destek</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menuBtn" class="lg:hidden text-slate-300 hover:text-white p-2 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-slate-900 border-b border-slate-800 px-4 pt-4 pb-6 space-y-3">
+            <a href="#kampanyalar" class="block py-2 text-slate-300 hover:text-amber-400 font-medium border-b border-slate-800/60">Flaş Kampanyalar</a>
+            <a href="#sinetech" class="block py-2 text-slate-300 hover:text-blue-400 font-medium border-b border-slate-800/60">Sinetech Dönüşüm</a>
+            <a href="#kameralar" class="block py-2 text-slate-300 hover:text-blue-400 font-medium border-b border-slate-800/60">Güvenlik Kameraları</a>
+            <a href="#gonul-koprusu" class="block py-2 text-slate-300 hover:text-emerald-400 font-medium border-b border-slate-800/60">Gönül Köprüsü</a>
+            <a href="#galeri" class="block py-2 text-slate-300 hover:text-blue-400 font-medium border-b border-slate-800/60">Galeri</a>
+            <a href="#hesaplayici" class="block py-2 text-slate-300 hover:text-blue-400 font-medium border-b border-slate-800/60">Tasarruf Hesapla</a>
+            <div class="pt-2">
+                <a href="https://wa.me/905308496559?text=Merhaba,%20Fethiye%20Kaptan%20Bili%C5%9Fim%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-3 rounded-xl font-bold text-center block shadow-lg">
+                    <i class="fab fa-whatsapp mr-2">></i> WhatsApp ile Hemen Bağlan
                 </a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <div class="tagline" data-i18n="hero_tagline">⭐ Güvenilir & Hızlı Yerel Teknik Hizmet</div>
-                <h1 id="hero-title">
-                    Fethiye'de <span class="gradient-text">Güvenlik Kamerası</span><br>& Bilgisayar Teknik Servisi
+    <section class="relative pt-20 pb-32 overflow-hidden bg-gradient-to-b from-slate-950 via-blue-950/40 to-slate-950">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.15),transparent_50%)]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs sm:text-sm font-bold uppercase tracking-wider mb-6">
+                    <i class="fas fa-bolt text-amber-400"></i> Fethiye'nin En Güvenilir Bilişim Çözüm Ortağı
+                </span>
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                    Bilgisayarınız Mı Bozuldu? <br>
+                    <span class="bg-gradient-to-r from-blue-400 via-indigo-300 to-amber-400 bg-clip-text text-transparent">Fethiye Yerinde Teknik Servis</span> Kapınızda!
                 </h1>
-                <p class="lead-text" id="hero-desc">
-                    Güvenlik kamerası kurulumu, bilgisayar arızaları ve ağ sorunlarınız için uzman kadromuzla yanınızdayız. Hızlı müdahale, garantili işçilik.
+                <p class="text-lg sm:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Format, lisanslı kurulum, veri kurtarma, eski bilgisayarları uçuran Sinetech dönüşümleri ve 4K güvenlik kamera sistemlerinde profesyonel çözümler.
                 </p>
-
-                <!-- BIG PHONE CALL BANNER -->
-                <div class="hero-phone-banner">
-                    <div class="hero-phone-content">
-                        <div class="hero-phone-icon-wrap">
-                            <i class="fa-solid fa-phone-volume"></i>
-                        </div>
-                        <div class="hero-phone-info">
-                            <span class="hero-phone-label" data-i18n="call_now_label">Hemen Arayın</span>
-                            <a href="tel:+905321234567" class="hero-phone-number" id="hero-phone-number">0532 123 45 67</a>
-                        </div>
-                        <a href="https://wa.me/905321234567" class="hero-wa-btn" target="_blank" id="hero-wa-btn">
-                            <i class="fa-brands fa-whatsapp"></i>
-                            <span data-i18n="whatsapp_btn">WhatsApp'ta Yaz</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="hero-actions">
-                    <button class="btn-primary start-chat-trigger" id="hero-cta-btn">
-                        <i class="fa-regular fa-comments"></i> <span data-i18n="hero_cta">Teklif Al</span>
-                    </button>
-                    <a href="#services" class="btn-secondary" id="hero-secondary-btn">
-                        <span data-i18n="hero_secondary">Hizmetlerimiz</span>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="https://wa.me/905308496559?text=Merhaba,%20yerinde%20servis%20veya%20kampanya%20bilgisi%20i%C3%A7in%20ula%C5%9F%C4%B1yorum." target="_blank" class="w-full sm:w-auto bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white px-8 py-4 rounded-2xl font-bold text-base shadow-xl shadow-emerald-600/30 flex items-center justify-center gap-3 transition hover:scale-105">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                        <span>WhatsApp'tan Hemen Yaz</span>
+                    </a>
+                    <a href="tel:05308496559" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-slate-100 border border-slate-700 px-8 py-4 rounded-2xl font-bold text-base shadow-xl flex items-center justify-center gap-3 transition">
+                        <i class="fas fa-phone-alt text-amber-400"></i>
+                        <span>0530 849 65 59</span>
                     </a>
                 </div>
             </div>
-            
-            <div class="hero-badge-container">
-                <div class="service-quick-cards">
-                    <div class="quick-card">
-                        <i class="fa-solid fa-video card-icon camera"></i>
-                        <h4 data-i18n="service_camera_title">Güvenlik Kamerası</h4>
-                        <p data-i18n="service_camera_desc">HD CCTV, IP kamera, uzaktan mobil izleme kurulumu.</p>
-                    </div>
-                    <div class="quick-card">
-                        <i class="fa-solid fa-laptop-code card-icon computer"></i>
-                        <h4 data-i18n="service_pc_title">Bilgisayar Tamiri</h4>
-                        <p data-i18n="service_pc_desc">Yazılım, donanım ve ağ/Wi-Fi sorunlarına hızlı çözüm.</p>
-                    </div>
-                    <div class="quick-card">
-                        <i class="fa-solid fa-wifi card-icon wifi"></i>
-                        <h4 data-i18n="service_net_title">Ağ & Wi-Fi Kurulum</h4>
-                        <p data-i18n="service_net_desc">Villa ve işyerleri için güçlü Mesh Wi-Fi altyapısı.</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- Services Grid -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-i18n="services_header_title">Hizmetlerimiz</h2>
-                <p data-i18n="services_header_subtitle">Fethiye, Göcek, Dalaman, Ortaca ve Muğla genelinde sunduğumuz profesyonel teknik hizmetler</p>
+    <!-- Flash Campaigns Section -->
+    <section id="kampanyalar" class="py-20 relative bg-slate-900/60 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-400 font-bold text-sm tracking-widest uppercase bg-amber-400/10 px-4 py-1 rounded-full border border-amber-400/20">Flaş Kampanyalar</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4">Kocaman, Net & Avantajlı Fiyatlar</h2>
+                <p class="text-slate-400 mt-2">Bütçenizi yormayan, nokta atışı profesyonel çözümler.</p>
             </div>
-            
-            <div class="services-grid">
-                <div class="service-detail-card">
-                    <div class="card-image-placeholder camera-bg">
-                        <i class="fa-solid fa-shield-halved"></i>
-                    </div>
-                    <div class="card-body">
-                        <h3 data-i18n="detail_camera_title">Güvenlik Kamerası & CCTV</h3>
-                        <p data-i18n="detail_camera_desc">Evinizi ve iş yerinizi cep telefonunuzdan 7/24 izleyin. IP kamera, analog HD ve kablosuz güvenlik kamerası çözümlerimizle huzur bulun.</p>
-                        <ul>
-                            <li><i class="fa-solid fa-check text-accent"></i> <span data-i18n="detail_camera_item1">Uzaktan mobilden canlı izleme kurulumu</span></li>
-                            <li><i class="fa-solid fa-check text-accent"></i> <span data-i18n="detail_camera_item2">Gece görüşlü ve hareket sensörlü kameralar</span></li>
-                            <li><i class="fa-solid fa-check text-accent"></i> <span data-i18n="detail_camera_item3">Yıllık bakım ve arıza giderme desteği</span></li>
-                        </ul>
-                        <a href="tel:+905321234567" class="card-cta-btn" id="card-call-1">
-                            <i class="fa-solid fa-phone"></i> <span data-i18n="card_call_btn">Bilgi Al</span>
-                        </a>
-                    </div>
-                </div>
 
-                <div class="service-detail-card">
-                    <div class="card-image-placeholder computer-bg">
-                        <i class="fa-solid fa-microchip"></i>
-                    </div>
-                    <div class="card-body">
-                        <h3 data-i18n="detail_pc_title">Bilgisayar & Ağ Teknolojileri</h3>
-                        <p data-i18n="detail_pc_desc">Yavaşlayan bilgisayarlar, çöken sistemler, Wi-Fi çekim problemleri veya veri kurtarma ihtiyaçlarınız için hızlı servis.</p>
-                        <ul>
-                            <li><i class="fa-solid fa-check text-accent"></i> <span data-i18n="detail_pc_item1">Windows / MacOS kurulumu ve virüs temizleme</span></li>
-                            <li><i class="fa-solid fa-check text-accent"></i> <span data-i18n="detail_pc_item2">Büyük villalar için Wi-Fi sinyal güçlendirme (Mesh)</span></li>
-                            <li><i class="fa-solid fa-check text-accent"></i> <span data-i18n="detail_pc_item3">Donanım yükseltme (SSD ve RAM montajı)</span></li>
-                        </ul>
-                        <a href="tel:+905321234567" class="card-cta-btn" id="card-call-2">
-                            <i class="fa-solid fa-phone"></i> <span data-i18n="card_call_btn">Bilgi Al</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="service-detail-card">
-                    <div class="card-image-placeholder paint-bg">
-                        <i class="fa-solid fa-fill-drip"></i>
-                    </div>
-                    <div class="card-body">
-                        <h3 data-i18n="detail_paint_title">İç & Dış Cephe Boyama</h3>
-                        <p data-i18n="detail_paint_desc">Villalarınız ve evleriniz için en kaliteli markalarla (Jotun, Filli Boya) temiz işçilik sunuyoruz. Eşyalarınızı özenle korur, tertemiz teslim ederiz.</p>
-                        <ul>
-                            <li><i class="fa-solid fa-check text-accent"></i> <span data-i18n="detail_paint_item1">Detaylı yüzey hazırlığı ve astar</span></li>
-                            <li><i class="fa-solid fa-check text-accent"></i> <span data-i18n="detail_paint_item2">Rutubet ve çatlak onarımı</span></li>
-                            <li><i class="fa-solid fa-check text-accent"></i> <span data-i18n="detail_paint_item3">Bahçe duvarı ve dış cephe boyama</span></li>
-                        </ul>
-                        <a href="tel:+905321234567" class="card-cta-btn" id="card-call-3">
-                            <i class="fa-solid fa-phone"></i> <span data-i18n="card_call_btn">Bilgi Al</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Us Section -->
-    <section class="why-us">
-        <div class="container text-center">
-            <h2 data-i18n="why_us_title">Neden Biz?</h2>
-            <div class="why-us-grid">
-                <div class="why-card">
-                    <i class="fa-solid fa-bolt icon-why"></i>
-                    <h3 data-i18n="why_time_title">Hızlı Müdahale</h3>
-                    <p data-i18n="why_time_desc">Fethiye, Göcek, Dalaman ve Ortaca genelinde arızalarınıza en kısa sürede dönüş sağlıyoruz.</p>
-                </div>
-                <div class="why-card">
-                    <i class="fa-solid fa-award icon-why"></i>
-                    <h3 data-i18n="why_quality_title">Garantili İşçilik</h3>
-                    <p data-i18n="why_quality_desc">Kullandığımız malzemeler ve yaptığımız tüm kurulumlar firmamızın garantisi altındadır.</p>
-                </div>
-                <div class="why-card">
-                    <i class="fa-solid fa-language icon-why"></i>
-                    <h3 data-i18n="why_lang_title">Çok Dilli Destek</h3>
-                    <p data-i18n="why_lang_desc">İngilizce, Rusça ve Türkçe konuşuyoruz. Yabancı müşterilerimizle doğrudan kendi dillerinde anlaşıyoruz.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Service Areas Section -->
-    <section class="locations-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-i18n="locations_title">Hizmet Bölgelerimiz</h2>
-                <p data-i18n="locations_subtitle">Fethiye ve çevre ilçelerdeki tüm mahalle ve beldelere hızlı servis sağlıyoruz</p>
-            </div>
-            <div class="locations-grid">
-                <div class="location-card">
-                    <h3 data-i18n="loc_cat1_title">Fethiye Merkez & Mahalleleri</h3>
-                    <ul>
-                        <li>Fethiye Merkez</li>
-                        <li>Çalış & Foça</li>
-                        <li>Taşyaka & Babataşı</li>
-                        <li>Akarca & Pazaryeri</li>
-                        <li>Tuzla & Karagözler</li>
-                    </ul>
-                </div>
-                <div class="location-card">
-                    <h3 data-i18n="loc_cat2_title">Fethiye Çevresi & Turistik Bölgeler</h3>
-                    <ul>
-                        <li>Ölüdeniz & Ovacık</li>
-                        <li>Hisarönü & Faralya</li>
-                        <li>Çiftlik & Kargı</li>
-                        <li>Yanıklar & Üzümlü</li>
-                        <li>Karaçulha & Eldirek</li>
-                    </ul>
-                </div>
-                <div class="location-card">
-                    <h3 data-i18n="loc_cat3_title">Çevre İlçeler & Beldeler</h3>
-                    <ul>
-                        <li>Göcek</li>
-                        <li>Dalaman</li>
-                        <li>Ortaca</li>
-                        <li>Dalyan</li>
-                        <li>Sarıgerme</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact CTA Section -->
-    <section class="contact-cta-section">
-        <div class="container contact-cta-inner">
-            <div class="contact-cta-text">
-                <h2 data-i18n="cta_title">Hemen İletişime Geçin</h2>
-                <p data-i18n="cta_desc">Sorunuz mu var? Teklif mi almak istiyorsunuz? Sizi arayalım.</p>
-            </div>
-            <div class="contact-cta-btns">
-                <a href="tel:+905321234567" class="btn-big-call" id="cta-call-btn">
-                    <i class="fa-solid fa-phone-volume"></i>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Kampanya 1 -->
+                <div class="relative bg-gradient-to-br from-slate-900 via-blue-950/40 to-slate-900 rounded-3xl p-8 border border-blue-500/30 shadow-2xl flex flex-col justify-between overflow-hidden group hover:border-blue-500 transition">
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl group-hover:bg-blue-500/20 transition"></div>
                     <div>
-                        <span class="btn-big-label" data-i18n="call_now_label">Hemen Arayın</span>
-                        <span class="btn-big-number" id="cta-phone-number">0532 123 45 67</span>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="bg-blue-500/20 text-blue-400 px-4 py-1.5 rounded-xl font-bold text-sm border border-blue-500/30">
+                                <i class="fas fa-laptop mr-1.5"></i> Bilgisayar Servisi
+                            </span>
+                            <span class="text-3xl sm:text-4xl font-black text-amber-400">500 TL</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-4">Bilgisayar Format & Lisanslı Kurulum</h3>
+                        <p class="text-slate-300 text-base mb-6 leading-relaxed">
+                            Bilgisayarınız ilk günkü hızına kavuşsun. Tüm sürücüler, temel programlar ve lisanslı sistem kurulumu dahil!
+                        </p>
+                        <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-2xl p-4 mb-8 flex items-center gap-3">
+                            <i class="fas fa-shield-alt text-emerald-400 text-2xl"></i>
+                            <div>
+                                <h4 class="text-emerald-300 font-bold text-sm">%100 Sıfır Veri Kaybı Garantisiyle!</h4>
+                                <p class="text-slate-400 text-xs">Dosyalarınız tamamen güvence altında yedeklenir.</p>
+                            </div>
+                        </div>
                     </div>
-                </a>
-                <a href="https://wa.me/905321234567" class="btn-big-wa" target="_blank" id="cta-wa-btn">
-                    <i class="fa-brands fa-whatsapp"></i>
+                    <a href="https://wa.me/905308496559?text=500%20TL%20Format%20ve%20Lisansl%C4%B1%20Kurulum%20kampanyas%C4%B1%20i%C3%A7in%20randevu%20almak%20istiyorum." target="_blank" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl text-center shadow-lg shadow-blue-600/30 transition flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp text-lg"></i> Kampanya İçin Randevu Al
+                    </a>
+                </div>
+
+                <!-- Kampanya 2 -->
+                <div class="relative bg-gradient-to-br from-slate-900 via-indigo-950/40 to-slate-900 rounded-3xl p-8 border border-amber-500/30 shadow-2xl flex flex-col justify-between overflow-hidden group hover:border-amber-500 transition">
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-amber-500/10 rounded-full blur-3xl group-hover:bg-amber-500/20 transition"></div>
                     <div>
-                        <span class="btn-big-label">WhatsApp</span>
-                        <span class="btn-big-number" data-i18n="whatsapp_btn">Mesaj Gönderin</span>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="bg-amber-500/20 text-amber-400 px-4 py-1.5 rounded-xl font-bold text-sm border border-amber-500/30">
+                                <i class="fas fa-database mr-1.5"></i> Veri Kurtarma
+                            </span>
+                            <span class="text-2xl sm:text-3xl font-black text-amber-400">500 TL'den Başlayan</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-4">Kayıp Fotoğraf & Veri Kurtarma</h3>
+                        <p class="text-slate-300 text-base mb-6 leading-relaxed">
+                            Silinen fotoğraflarınız, aile anılarınız, iş belgeleriniz ve verileriniz profesyonel yazılımlarımızla geri getirilsin.
+                        </p>
+                        <div class="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-4 mb-8 flex items-center gap-3">
+                            <i class="fas fa-hand-holding-heart text-amber-400 text-2xl"></i>
+                            <div>
+                                <h4 class="text-amber-300 font-bold text-sm">"Kurtaramazsak Ücret Almıyoruz!"</h4>
+                                <p class="text-slate-400 text-xs">Risk sıfır, başarı odaklı profesyonel veri kurtarma.</p>
+                            </div>
+                        </div>
                     </div>
+                    <a href="https://wa.me/905308496559?text=Veri%20kurtarma%20ve%20kay%C4%B1p%20foto%C4%9Faf%20hizmeti%20i%C3%A7in%20bilgi%20almak%20istiyorum." target="_blank" class="w-full bg-amber-600 hover:bg-amber-500 text-white font-bold py-4 rounded-xl text-center shadow-lg shadow-amber-600/30 transition flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp text-lg"></i> Hemen Verini Kurtar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sinetech Viral Dönüşüm Bölümü -->
+    <section id="sinetech" class="py-24 relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-blue-900/40 via-indigo-900/40 to-purple-900/40 rounded-3xl p-8 sm:p-12 border border-blue-500/30 shadow-2xl relative">
+                <div class="absolute top-0 right-0 transform translate-x-4 -translate-y-4 hidden lg:block">
+                    <span class="bg-amber-400 text-slate-950 font-black text-xs px-4 py-2 rounded-full uppercase tracking-widest shadow-lg">Viral Dönüşüm</span>
+                </div>
+                
+                <div class="max-w-3xl">
+                    <span class="text-blue-400 font-bold text-sm tracking-widest uppercase">Sinetech Teknolojisi</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-3 mb-6">"ESKİ BİLGİSAYARLAR ÇÖPTEN ÇIKACAK!"</h2>
+                    <p class="text-xl sm:text-2xl font-bold text-amber-400 mb-6">
+                        "1 GB RAM ile çalışır, 2 GB RAM ile uçar!"
+                    </p>
+                    <p class="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed">
+                        Çöpe atmayı düşündüğünüz, kasan veya yavaşlayan eski masaüstü ve laptoplarınızı modern birer canavara dönüştürüyoruz.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+                        <div class="bg-slate-900/80 p-6 rounded-2xl border border-slate-800">
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-xl mb-4 font-bold">
+                                <i class="fab fa-android"></i>
+                            </div>
+                            <h3 class="text-white font-bold text-lg mb-2">Android 11 & ChromeOS Flex</h3>
+                            <p class="text-slate-400 text-sm">Eski bilgisayarınızı YouTube, EBA, Netflix ve akıllı TV Box gibi kullanın.</p>
+                        </div>
+                        <div class="bg-slate-900/80 p-6 rounded-2xl border border-slate-800">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl mb-4 font-bold">
+                                <i class="fas fa-usb"></i>
+                            </div>
+                            <h3 class="text-white font-bold text-lg mb-2">USB Tak & Çalıştır</h3>
+                            <p class="text-slate-400 text-sm">"USB Tak Android Aç, Çıkar Kendi Windows'una Dön!" Sınırsız esneklik.</p>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/905308496559?text=Sinetech%20eski%20bilgisayar%20d%C3%B6n%C3%BC%C5%9F%C3%BCm%C3%BC%20i%C3%A7in%20bilgi%20almak%20istiyorum." target="_blank" class="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition hover:scale-105">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        <span>Eski Bilgisayarımı Uçur!</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Camera Systems -->
+    <section id="kameralar" class="py-20 bg-slate-900/40 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-amber-400 font-bold text-sm tracking-widest uppercase bg-amber-400/10 px-4 py-1 rounded-full border border-amber-400/20">Güvenlik Çözümleri</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4 mb-6">Ev, Villa ve İşyeriniz Güvende!</h2>
+                    <p class="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed">
+                        4K Gece Görüşlü üstün teknoloji güvenlik kameraları ile mülkünüzü 7/24 koruma altına alın. Anında telefonunuza bağlanın.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4 bg-slate-900 p-4 rounded-2xl border border-slate-800">
+                            <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 font-bold">
+                                <i class="fas fa-mobile-screen"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-base">Telefondan 7/24 Canlı İzleme & Ses Dinleme</h3>
+                                <p class="text-slate-400 text-sm">Dünyanın neresinde olursanız olun cebinizden canlı takip edin.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 bg-slate-900 p-4 rounded-2xl border border-slate-800">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 font-bold">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-base">Kayıt Cihazı (DVR/NVR) ve Kamera Arıza Onarımı</h3>
+                                <p class="text-slate-400 text-sm">Mevcut kameralarınızın bakımı, arıza tespiti ve onarımı yerinde yapılır.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/905308496559?text=G%C3%BCvenlik%20kamera%20sistemleri%20i%C3%A7in%20ke%C5%9Fif%20ve%20fiyat%20teklifi%20almak%20istiyorum." target="_blank" class="inline-flex items-center gap-3 bg-amber-600 hover:bg-amber-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition hover:scale-105">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        <span>Kamera Sistemi Keşif Talebi</span>
+                    </a>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-amber-500/20 rounded-3xl blur-2xl"></div>
+                    <div class="relative rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-900">
+                        <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1000&q=80" alt="Güvenlik Kamera Sistemleri" class="w-full h-[450px] object-cover hover:scale-105 transition duration-500">
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent p-6">
+                            <span class="text-amber-400 font-bold text-sm">4K Ultra HD Teknoloji</span>
+                            <h4 class="text-white text-xl font-bold">Gece Görüşlü Akıllı Kamera Sistemleri</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gönül Köprüsü Section -->
+    <section id="gonul-koprusu" class="py-20 bg-gradient-to-b from-slate-950 via-emerald-950/20 to-slate-950 border-t border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-slate-900 via-slate-900 to-emerald-950/40 rounded-3xl p-8 sm:p-12 border border-emerald-500/30 shadow-2xl relative text-center">
+                <div class="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 border border-emerald-500/30">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <span class="text-emerald-400 font-bold text-sm tracking-widest uppercase">Gönül Köprüsü & Esnaf Sözü</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-6">Eğitim Her Şeyden Önemlidir</h2>
+                <blockquote class="text-lg sm:text-2xl text-slate-200 italic font-medium max-w-3xl mx-auto mb-8 leading-relaxed">
+                    "Esnaf Sözü: Durumu olmayan öğrenciye ve ihtiyaç sahibine ücret ikinci plandadır. Yeter ki bilgisayarınız açılsın, dersinizden kalmayın."
+                </blockquote>
+                <a href="https://wa.me/905308496559?text=G%C3%B6n%C3%BCl%20k%C3%B6pr%C3%BCs%C3%BC%20deste%C4%9Fi%20i%C3%A7in%20ula%C5%9F%C4%B1yorum." target="_blank" class="inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition hover:scale-105">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    <span>Destek Al / İletişime Geç</span>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Photo Gallery -->
+    <section id="galeri" class="py-20 bg-slate-900/40 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-blue-400 font-bold text-sm tracking-widest uppercase bg-blue-400/10 px-4 py-1 rounded-full border border-blue-400/20">Profesyonel Galeri</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4">Çalışmalarımızdan Kareler</h2>
+                <p class="text-slate-400 mt-2">Donanım, veri kurtarma ve teknik servis laboratuvarımızdan görünüm.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="group relative rounded-2xl overflow-hidden border border-slate-800 shadow-xl bg-slate-900">
+                    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80" alt="Temiz Laptop" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                    <span class="absolute bottom-4 left-4 text-white font-bold text-sm">Temiz Laptop & Bakım</span>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden border border-slate-800 shadow-xl bg-slate-900">
+                    <img src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=600&q=80" alt="Güvenlik Kamera" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                    <span class="absolute bottom-4 left-4 text-white font-bold text-sm">Güvenlik Kameraları</span>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden border border-slate-800 shadow-xl bg-slate-900">
+                    <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=600&q=80" alt="SSD Donanım" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                    <span class="absolute bottom-4 left-4 text-white font-bold text-sm">SSD & Donanım Yükseltme</span>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden border border-slate-800 shadow-xl bg-slate-900">
+                    <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=600&q=80" alt="Veri Kurtarma" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                    <span class="absolute bottom-4 left-4 text-white font-bold text-sm">Veri Kurtarma Laboratuvarı</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Section: Tasarruf Hesaplayıcı & SSS -->
+    <section id="hesaplayici" class="py-20 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-amber-400 font-bold text-sm tracking-widest uppercase bg-amber-400/10 px-4 py-1 rounded-full border border-amber-400/20">Akıllı Karşılaştırma</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4">Tasarruf Hesaplayıcı</h2>
+                <p class="text-slate-400 mt-2">Yeni bir bilgisayara 25.000 TL+ ödemek yerine eski bilgisayarınızı yenileyerek ne kadar tasarruf edeceğinizi görün!</p>
+            </div>
+
+            <div class="bg-slate-900 p-8 rounded-3xl border border-slate-800 shadow-2xl mb-20">
+                <div class="mb-6">
+                    <label for="upgradeCost" class="block text-slate-300 font-semibold mb-2">Yenileme ve Hızlandırma Maliyeti (Tahmini): <span id="costVal" class="text-amber-400 font-bold text-xl">2.500 TL</span></label>
+                    <input type="range" id="upgradeCost" min="1000" max="6000" step="500" value="2500" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-500">
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-slate-800 text-center">
+                    <div class="bg-slate-950/60 p-6 rounded-2xl border border-slate-800">
+                        <span class="block text-slate-400 text-sm mb-1">Yeni Laptop Maliyeti</span>
+                        <span class="text-2xl sm:text-3xl font-black text-rose-400">25.000 TL</span>
+                    </div>
+                    <div class="bg-slate-950/60 p-6 rounded-2xl border border-slate-800">
+                        <span class="block text-slate-400 text-sm mb-1">Cebinizde Kalan Tasarruf</span>
+                        <span id="savingsVal" class="text-2xl sm:text-3xl font-black text-emerald-400">22.500 TL</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SSS Akordeon -->
+            <div id="sss" class="text-center mb-12">
+                <span class="text-blue-400 font-bold text-sm tracking-widest uppercase bg-blue-400/10 px-4 py-1 rounded-full border border-blue-400/20">Merak Edilenler</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4">Sıkça Sorulan Sorular</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-white flex justify-between items-center focus:outline-none">
+                        <span>Yerinde servis hizmetiniz hangi bölgeleri kapsıyor?</span>
+                        <i class="fas fa-chevron-down text-blue-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-slate-300 text-sm leading-relaxed">
+                        Fethiye merkez ve tüm çevre mahalleler / tatil beldelerinde (Göcek, Çalış, Ölüdeniz, Üzümlü vb.) yerinde teknik servis hizmeti sunmaktayız.
+                    </div>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-white flex justify-between items-center focus:outline-none">
+                        <span>500 TL format kampanyasına neler dahil?</span>
+                        <i class="fas fa-chevron-down text-blue-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-slate-300 text-sm leading-relaxed">
+                        Windows formatı, lisanslı sürücü kurulumları, temel programlar (Office, tarayıcılar, medya oynatıcılar) ve %100 sıfır veri kaybı garantili dosya yedeği dahildir.
+                    </div>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-white flex justify-between items-center focus:outline-none">
+                        <span>Veri kurtarma işleminde ücret politikası nedir?</span>
+                        <i class="fas fa-chevron-down text-blue-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-slate-300 text-sm leading-relaxed">
+                        "Kurtaramazsak ücret almıyoruz!" prensibiyle çalışıyoruz. Verileriniz başarıyla kurtarılıp size gösterildikten sonra ücret alınır.
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container footer-content text-center">
-            <div class="footer-logo">
-                <i class="fa-solid fa-anchor"></i> FETHİYE TEKNİK SERVİS
+    <footer id="iletisim" class="bg-slate-950 border-t border-slate-800 py-16 text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-bold">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <span class="text-white font-extrabold text-lg">Kaptan Bilişim</span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-4">
+                        Fethiye ve çevresi bilgisayar tamiri, teknik servis, veri kurtarma ve güvenlik kamera sistemleri.
+                    </p>
+                    <span class="text-white font-bold text-sm block">Telefon: <a href="tel:05308496559" class="text-amber-400 hover:underline">0530 849 65 59</a></span>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-base mb-4">Hızlı Bağlantılar</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#kampanyalar" class="hover:text-white transition">Flaş Kampanyalar</a></li>
+                        <li><a href="#sinetech" class="hover:text-white transition">Sinetech Dönüşüm</a></li>
+                        <li><a href="#kameralar" class="hover:text-white transition">Güvenlik Kameraları</a></li>
+                        <li><a href="#gonul-koprusu" class="hover:text-white transition">Gönül Köprüsü</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-base mb-4">İletişim & Konum</h3>
+                    <p class="text-sm mb-2"><i class="fas fa-map-marker-alt text-amber-400 mr-2"></i> Fethiye ve Çevresi Yerinde Teknik Servis</p>
+                    <p class="text-sm mb-4"><i class="fab fa-whatsapp text-emerald-400 mr-2"></i> WhatsApp: 0530 849 65 59</p>
+                    <a href="https://wa.me/905308496559?text=Merhaba,%20web%20sitenizden%20ula%C5%9F%C4%B1yorum." target="_blank" class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition">
+                        <i class="fab fa-whatsapp mr-2"></i> WhatsApp Destek Hattı
+                    </a>
+                </div>
             </div>
-            <p class="footer-phone"><a href="tel:+905321234567" id="footer-phone-link">📞 0532 123 45 67</a></p>
-            <p class="footer-subtext" data-i18n="footer_sub">Fethiye, Göcek, Dalaman, Ortaca and Muğla Çevresi Yetkili Teknik Servis Sağlayıcısı</p>
-            <p class="footer-copy">&copy; 2026 Fethiye Teknik Servis. Tüm hakları saklıdır.</p>
+            <div class="border-t border-slate-900 pt-8 text-center text-xs text-slate-500">
+                &copy; 2026 Fethiye Kaptan Bilişim Teknolojileri. Tüm hakları saklıdır.
+            </div>
         </div>
     </footer>
 
-    <!-- Floating Action Buttons -->
-    <div class="floating-actions">
-        <a href="tel:+905321234567" class="fab fab-call" id="fab-call" title="Hemen Ara">
-            <i class="fa-solid fa-phone"></i>
-            <span class="fab-label" data-i18n="fab_call">Ara</span>
-        </a>
-        <a href="https://wa.me/905321234567" class="fab fab-wa" id="fab-wa" target="_blank" title="WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i>
-            <span class="fab-label">WhatsApp</span>
-        </a>
-        <button class="fab fab-chat start-chat-trigger" id="fab-chat" title="AI Asistan">
-            <i class="fa-solid fa-comments"></i>
-            <span class="fab-label" data-i18n="fab_chat">Teklif</span>
-        </button>
-    </div>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/905308496559?text=Merhaba,%20acil%20teknik%20servis%20veya%20bilgi%20almak%20istiyorum." target="_blank" aria-label="WhatsApp Destek" class="whatsapp-float fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl transition hover:scale-110">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-    <!-- Floating Chat Widget -->
-    <div class="chat-widget" id="chat-widget">
-        <!-- Chat Window -->
-        <div class="chat-window" id="chat-window">
-            <div class="chat-header">
-                <div class="chat-header-left">
-                    <i class="fa-solid fa-anchor header-icon"></i>
-                    <div>
-                        <h4 id="bot-name">Fethiye Teknik Servis AI</h4>
-                        <span class="status-online"><span class="dot"></span> <span data-i18n="bot_status">Çevrimiçi (Destek)</span></span>
-                    </div>
-                </div>
-                <button class="chat-close" id="chat-close"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            
-            <div class="chat-messages" id="chat-messages">
-                <div class="message system-msg">
-                    <span data-i18n="chat_welcome_meta">Kaptan AI Ajanı bağlandı. Diliniz otomatik algılanacaktır.</span>
-                </div>
-                <div class="message bot-msg">
-                    <p data-i18n="chat_welcome">Merhaba! Kaptan Bilişim'e hoş geldiniz. Güvenlik kamerası kurulumu veya bilgisayar arızaları konusunda destek sunuyoruz. Size nasıl yardımcı olabilirim?</p>
-                </div>
-            </div>
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-            <div class="chat-input-area">
-                <input type="text" id="chat-input" placeholder="Mesajınızı yazın..." data-i18n-placeholder="chat_placeholder">
-                <button id="chat-send"><i class="fa-solid fa-paper-plane"></i></button>
-            </div>
-        </div>
-    </div>
+        // Tasarruf Hesaplayıcı Slider
+        const upgradeCostInput = document.getElementById('upgradeCost');
+        const costValSpan = document.getElementById('costVal');
+        const savingsValSpan = document.getElementById('savingsVal');
+        const newLaptopPrice = 25000;
 
-    <!-- Multi-language script file -->
-    <script src="script.js?v=2.0"></script>
-    <!-- Animated Background -->
-    <script src="bg-animation.js"></script>
+        upgradeCostInput.addEventListener('input', (e) => {
+            const val = parseInt(e.target.value);
+            costValSpan.textContent = val.toLocaleString('tr-TR') + ' TL';
+            const savings = newLaptopPrice - val;
+            savingsValSpan.textContent = savings.toLocaleString('tr-TR') + ' TL';
+        });
+
+        // SSS Akordeon
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('fa-chevron-down');
+                content.classList.toggle('hidden');
+                btn.classList.toggle('text-blue-400');
+            });
+        });
+    </script>
 </body>
-    </html>
+</html>
